@@ -34,25 +34,122 @@ body {
     color: #333333;
 }
 
+.wrap {
+    position: relative;
+}
+
 .inner {
     width: 1200px;
     margin: auto;
 }
 
 header {
+    position: relative;
     height: 100px;
     background: #AA7744;
+    padding-top: 30px;
+    padding-left: 10px;
+}
+
+nav {
+    position: absolute;
+    top: 30px;
+    right: 10px;
+}
+
+nav>ul {
+    display: flex;
+}
+
+nav>ul>li>a {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    width: 120px;
+    padding: 10px;
+    background: #997766;
+    color: #FFFFFF;
+}
+
+nav>ul>li:hover>a,
+nav>ul>li>a:focus,
+nav>ul>li.on>a {
+    background: #333333;
+    color: #FFFFFF;
+}
+
+.sub>li>a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background: #AA8877;
+    color: #FFFFFF;
+}
+
+/*나중에 지워야 함*/
+.sub {
+    display: none;
+}
+
+.sub>li>a:hover,
+.sub>li>a:focus {
+    background: #555555;
+    color: #FFFFFF;
 }
 
 .slide {
     height: 300px;
     background: #CCAA77;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide>ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 900px;
+}
+
+.slide>ul>li {
+    width: 1200px;
+    height: 300px;
+    position: relative;
+}
+
+
+.slide>ul>li>a {
+    display: block;
+    height: 100%;
+}
+
+.slide>ul>li.s1 {
+    background: url(../img/img1.jpg) center/cover no-repeat;
+}
+
+.slide>ul>li.s2 {
+    background: url(../img/img2.jpg) center/cover no-repeat;
+}
+
+.slide>ul>li.s3 {
+    background: url(../img/img3.jpg) center/cover no-repeat;
+}
+
+.slide>ul>li>a>h2 {
+    background: #DDBBBB;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    padding: 15px;
 }
 
 .con {
     height: 200px;
     background: #997766;
     display: flex;
+    position: relative;
 }
 
 .con>article {
@@ -63,7 +160,191 @@ header {
     background: #ffffff;
 }
 
+.con1 {
+    position: relative;
+}
+
+.con1 .tabmenu {
+    display: flex;
+}
+
+.con1 .tabmenu>li {
+    width: 150px;
+    background: #FFBBAA;
+}
+
+.con1 .tabmenu>li.on {
+    background: #EE9988;
+    color: #FFFFFF;
+}
+
+.con1 .tabmenu>li>h2>a {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 20px;
+
+}
+
+.con1 .tabcon {
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+.notice th {
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.notice td {
+    color: #FFFFFF;
+}
+
+.notice tr {
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.notice a {
+    padding: 5px;
+    display: block;
+    width: 300px;
+}
+
+.gall {
+    padding: 35px;
+}
+
+.gall ul {
+    display: flex;
+    gap: 50px;
+}
+
+/*나중에 지우기*/
+.gall {
+    display: none;
+}
+
+.con2 {
+    padding: 10px;
+}
+
+.con2 a {
+    display: block;
+    background: url(../img/banner.jpg) center/cover;
+    height: 100%;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.con2 div {
+    background: rgba(200, 200, 200, .8);
+    height: 100%;
+    padding-top: 20px;
+    border-radius: 20px;
+}
+
+.con2 p {
+    background: #000000;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.con3 {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.con3 h2 {
+    position: absolute;
+    color: #FFFFFF;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.con3 a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.con3 img {
+    width: 100%;
+    height: 100%;
+}
+
+.con3 span {
+    position: absolute;
+    color: #FFFFFF;
+    background: #887766;
+    padding: 10px;
+    border-radius: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 footer {
     height: 100px;
-    background: #AA5522;
+    background: #333333;
+    color: #FFFFFF;
+    position: relative;
+    padding-top: 30px;
+    padding-left: 25px;
+    display: flex;
+    gap: 50px;
+}
+
+.sns {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+.sns li a {
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px;
+    width: 500px;
+    background: #FFFFFF;
+    z-index: 9999;
+    display: none;
+    /*나중에 확인*/
+}
+
+.popup h2 {
+    color: #555555;
+    margin-bottom: 20px;
+}
+
+.popup .popuptext {
+    padding: 20px 0;
+}
+
+.popup .button {
+    text-align: right;
+}
+
+.popup button {
+    border: 0;
+    padding: 20px;
+    background: #775522;
+    color: #FFFFFF;
+}
+
+.popup button:hover {
+    background: #332211;
 }
