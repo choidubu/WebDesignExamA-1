@@ -55,6 +55,7 @@ nav {
     position: absolute;
     top: 30px;
     right: 10px;
+    z-index: 10;
 }
 
 nav>ul {
@@ -147,17 +148,13 @@ nav>ul>li.on>a {
 
 .con {
     height: 200px;
-    background: #997766;
+    background: #AA9999;
     display: flex;
     position: relative;
 }
 
 .con>article {
     width: 400px;
-}
-
-.con>article:nth-child(2) {
-    background: #ffffff;
 }
 
 .con1 {
